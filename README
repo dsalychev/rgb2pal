@@ -1,0 +1,26 @@
+RGB to palette
+--------------
+It's a program to find a nearest color from the given palette to the
+selected 24-bit RGB. It calculates a distance between two colors in
+YUV colorspace in order to find similar ones according to the
+"average human perception".
+
+How to install
+--------------
+Running:
+
+	$ mkdir build && cd build
+	$ cmake .. && make install
+
+from the repository root should generally be enough to install the program.
+Please, note that terminal palette won't be installed by default.
+
+How to use
+----------
+In order to find the nearest color to #BC7575 from a palette with 256
+terminal colors, run:
+
+	$ rgb2pal bc7575 terminal256.palette
+	131 #af5f5f
+
+You'll receive a color with index 131 which value is #AF5F5F.
